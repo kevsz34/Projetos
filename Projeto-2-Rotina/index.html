@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculador de tempo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cda1183e27.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <main class="container">
+
+      <div class="background"></div>
+
+      <div class="images">
+         <img src="imgs/cara_daora.png" alt="jesus">
+         <img src="imgs/cara_paia.png" alt="demonio">
+      </div>
+ <!---------------------------------------------------IMAGENS E FUNDO--------------------------------------->
+
+      <h1>Calculador de Tempo</h1>
+
+      <div class="containerCards">
+
+<!------------------------------------------------DIVISAO PARA O TEMPO BOM----------------------------------------------------------------------------->
+
+        <div id="cardBom">
+          <h2>Tempo Bom</h2>
+<div class="divisaoTtl"></div>
+          <section class="containerTipo">
+            <h3>Estudo</h3>
+            <div class="input">
+              <i class="fa-solid fa-brain"></i> <input type="number" id="estudoHrs" placeholder="Tempo em horas..." />
+              <input type="number" id="estudoMins" placeholder="Tempo em mins..." /> <i class="fa-solid fa-code"></i>
+            </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Leitura</h3>
+            <div class="input">
+              <i class="fa-solid fa-book"></i> <input type="number" id="leituraHrs" placeholder="Tempo em horas..."/>
+              <input type="number" id="leituraMins" placeholder="Tempo em mins..."/> <i class="fa-brands fa-leanpub"></i>
+            </div>
+          </section>
+
+          <section id="containerTotal">
+            <button onclick="calcularBom()">CALCULAR</button>
+            <div class="total">
+            <h4>Total:</h4>
+            <p id="totalBomH"></p><p> horas e </p>
+            <p id="totalBomM"></p><p>minutos</p>
+          </div>
+          </section>
+        </div>
+
+<!------------------------------------------------DIVISAO PARA O RESULTADO----------------------------------------------------------------------------->
+
+        <div id="cardResultado">
+
+          <h3>Sobraram ou passaram:</h3>
+<div class="divisaoTtl"></div>
+          <div id="finalH"><p></p></div>
+            <p>e</p>
+            <div id="finalM"><p></p></div>
+            <button onclick="calcular()">CALCULAR</button>
+        </div>
+
+<!------------------------------------------------DIVISAO PARA O TEMPO RUIM----------------------------------------------------------------------------->
+
+        <div id="cardRuim">
+        
+          <h2>Tempo Ruim</h2>
+<div class="divisaoTtl"></div>
+          <section class="containerTipo">
+            <h3>Conteúdo Rapido</h3>
+            <div class="input">
+              <i class="fa-brands fa-tiktok"></i> <input type="number" id="rapidoHrs" placeholder="Tempo em horas..." />
+              <input type="number" id="rapidoMins" placeholder="Tempo em mins..." /> <i class="fa-brands fa-instagram"></i>
+           </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Videos e Séries</h3>
+            <div class="input">
+              <i class="fa-solid fa-video"></i> <input type="number" id="videoHrs" placeholder="Tempo em horas..." />
+              <input type="number" id="videoMins" placeholder="Tempo em mins..." /> <i class="fa-brands fa-youtube"></i>
+            </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Jogo</h3>
+            <div class="input">
+              <i class="fa-solid fa-gamepad"></i> <input type="number" id="jogoHrs" placeholder="Tempo em horas..." />
+              <input type="number" id="jogoMins" placeholder="Tempo em mins..." /> <i class="fa-solid fa-display"></i>
+            </div>
+          </section>
+
+          <section class="containerTotal">
+            <button onclick="calcularRuim()">CALCULAR</button>
+            
+            <div class="total">
+              <h4>Total:</h4>
+            <p id="totalRuimH"></p><p> horas e </p>
+            <p id="totalRuimM"></p> <p>minutos</p>
+          </div>
+          </section>
+
+        </div>
+      </div>
+   
+<!------------------------------------------------DIVISAO PARA A BARRA %----------------------------------------------------------------------------->
+
+      <div class="containerBarra">
+        <div class="cardBarra">
+          <section id="ladoBom"><p>AAAAAAAA</p></section>
+
+          <section id="ladoRuim"><p> OIIIIIIIIIIII</p></section>
+        </div>
+      </div>
+     </main>  
+<script src="script.js"></script>
+
+  </body>
+</html>
