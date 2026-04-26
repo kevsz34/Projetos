@@ -7,14 +7,13 @@
 }
 body{
     background-color: black;
-    color: rgb(0, 0, 0);
+    color: rgb(151, 151, 151);
     margin: 0;
 }
 .container{
     min-height: 100vh;
     position: relative;
-   
-    
+   text-align: center;
 }
 
 /* CARDS */
@@ -52,8 +51,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-self: start;
+    text-align: center;
     padding: 15px;
     border-radius: 30px;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
     color: white;
     background-color: #1414a0;
 }
@@ -110,32 +113,36 @@ padding-top: 15px;
 .containerResultado{
     display: flex;
     flex-direction: column;
+
     align-items: center;
-    padding-top: 20px;
+    gap: 10px;
+   width: 100%;
+   height: 100%;
 }
 #finalH{
     text-align: center;
     background-color: rgba(0, 94, 255, 0.604);
     color: white;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    padding-top: 100px;
+   padding: 20px;
+   width: 100px;
+   height: 100px;
 }
 #finalM{
     text-align: center;
     border-radius: 50%;
     background-color: rgba(0, 94, 255, 0.604);
-    width: 100px;
-    height: 100px;
+    padding: 20px;
+ width: 100px;
+ height: 100px;
 }
 .containerTotal{
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
 }
 #cardBom .containerTotal{
-  padding-top: 110px;
+  padding-top: 120px;
 }
 .total{
     display: flex;
@@ -152,6 +159,11 @@ padding-top: 15px;
     padding: 5px
    
 }
+#botaoB:hover{
+    background-color: #051e0573;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
+}
 #botaoResultado{
      align-self: center;
     border-color: #7b73e8;
@@ -161,6 +173,12 @@ padding-top: 15px;
     width: 100%;
     max-width: 100px;
     padding: 5px
+     
+}
+#botaoResultado:hover{
+    background-color: #221e63;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
 }
 #botaoR{
  align-self: center;
@@ -172,9 +190,42 @@ padding-top: 15px;
     max-width: 150px;
     padding: 5px
 }
+#botaoR:hover{
+    background-color: #450d0db5;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
+}
 
-@media (max-width: 600px){
-   
+@media (max-width: 768px){
+   .containerGrid {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 20px;
+ }
+ #cardBom { order: -1; }
+  #cardRuim { order: -1; }      /* Ruim vem antes do Resultado! */
+  #cardResultado { order: -2; }
+  .cardBarra { order: 2; }
+
+  #cardBom, #cardRuim{
+    height: 500px;
+  max-height: none;
+  }
+  .input {
+   padding-bottom: 80px;
+  }
+  .containerTipo{
+    max-height: 120px;
+    
+  }
+  .containerTotal{
+    height: 100%;
+    max-height: 50px;
+    padding: 0;
+  }
+  #cardBom .containerTotal {
+    padding: 100px;
+  }
 }
 
     
