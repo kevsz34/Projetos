@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cda1183e27.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <main class="container">
+
+      <h1>Time Calculator</h1>
+      <div class="containerGrid">
+
+<!--============================================================PRODUCTIVE TIME SECTION=========================================================================================-->
+
+        <div id="cardGood">
+          <h2>Productive Time</h2>
+            <div class="divisaoTtl"></div>
+          <section class="containerTipo">
+            <h3>Study</h3>
+            <div class="input">
+              <i class="fa-solid fa-brain"></i> <input type="number" id="studyHrs" placeholder="Time in hours..." />
+              <input type="number" id="studyMins" placeholder="Time in mins..." /> <i class="fa-solid fa-code"></i>
+            </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Reading</h3>
+            <div class="input">
+              <i class="fa-solid fa-book"></i> 
+              <input type="number" id="readingHrs" placeholder="Time in hours..."/>
+              <input type="number" id="readingMins" placeholder="Time in mins..."/>
+              <i class="fa-brands fa-leanpub"></i> 
+            </div>
+          </section>
+
+          <section class="containerTotal">
+            <button onclick="calculateGood()" id="buttonG">CALCULATE</button>
+            <div class="total">
+            <h4>Total:</h4>
+            <p id="totalGoodH"></p><p> hours and </p>
+            <p id="totalGoodM"></p><p>minutes</p>
+          </div>
+          </section>
+        </div>
+
+<!--============================================================MIDDLE COLUMN===================================================================================-->
+    <div class="middleColumn">
+
+        <div id="cardResult">
+          <h3>Remaining(+) or Exceeded(-):</h3>
+
+          <div class="ttlDivision"></div>
+
+          <div class="containerResult">
+            <div id="finalH"><p id="numFinalH"></p><p>hours</p></div>
+            <p>and</p>
+            <div id="finalM"><p id="numFinalM"></p><p>minutes</p></div>
+           <button onclick="calculate()" id="buttonResult">CALCULATE</button>
+          </div>
+        </div>
+
+
+     <!---------------------------------------------PERCENTAGE BAR SECTION----------------------------------------------------------------------------->
+     
+
+        <div id="cardBarra">
+          <section id="sideGood"><p id="percentage1"></p><p>%</p></section>
+
+          <section id="sideBad"><p id="percentage2"></p><p>%</p></section>
+        </div>
+
+    </div>
+
+<!--============================================================UNPRODUCTIVE TIME SECTION=======================================================================-->
+     
+        <div id="cardBad">
+         
+          <h2>Unproductive Time</h2>
+          <div class="divisaoTtl"></div>
+          <section class="containerTipo">
+            
+            <h3>Short Content</h3>
+            <div class="input">
+              <i class="fa-brands fa-tiktok"></i> <input type="number" id="shortHrs" placeholder="Time in hours..." />
+              <input type="number" id="shortMins" placeholder="Time in mins..." /> <i class="fa-brands fa-instagram"></i>
+           </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Videos & Series</h3>
+            <div class="input">
+              <i class="fa-solid fa-video"></i> <input type="number" id="videoHrs" placeholder="Time in hours..." />
+              <input type="number" id="videoMins" placeholder="Time in mins..." /> <i class="fa-brands fa-youtube"></i>
+            </div>
+          </section>
+
+          <section class="containerTipo">
+            <h3>Gaming</h3>
+            <div class="input">
+              <i class="fa-solid fa-gamepad"></i> <input type="number" id="gamingHrs" placeholder="Time in hours..." />
+              <input type="number" id="gamingMins" placeholder="Time in mins..." /> <i class="fa-solid fa-display"></i>
+            </div>
+          </section>
+
+          <section class="containerTotal">
+            <button onclick="calculateBad()" id="buttonB">CALCULATE</button>
+            
+            <div class="total">
+              <h4>Total:</h4>
+            <p id="totalBadH"></p><p> hours and </p>
+            <p id="totalBadM"></p> <p>minutes</p>
+          </div>
+          </section>
+
+        </div>
+      </div>
+   
+
+     </main>  
+<script src="script.js"></script>
+
+  </body>
+</html>

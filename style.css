@@ -1,0 +1,241 @@
+*{
+   
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body{
+    background-color: black;
+    color: rgb(151, 151, 151);
+    margin: 0;
+}
+.container{
+    min-height: 100vh;
+    position: relative;
+   text-align: center;
+}
+
+/* CARDS */
+.containerGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+
+/* PRODUCTIVE TIME CARD */
+#cardGood{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    max-width: 360px;
+    border-radius: 30px;
+    background-color: #006400;
+}
+/* RESULT CARD */
+.middleColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: center;
+    gap: 40px;
+   
+}
+#cardResult{
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #1414a0;
+}
+#buttonResult{
+padding-top: 15px;
+}
+
+/* UNPRODUCTIVE TIME CARD */
+#cardBad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-self: center;
+    height:100%;
+     max-height: 450px;
+    max-width: 360px;
+   width: 100%;
+    border-radius: 30px;
+    background-color:  #dc1c1c;
+}
+.ttlDivision{
+    width: 100%;
+    max-width: 300px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+}
+#cardGood h2, #cardBad h2{
+    font-size: 21px;
+}
+.containerTipo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input input{
+    width: 120px;
+    height: 30px;
+}
+#cardBarra{
+    display: flex;
+    width: 300px;
+}
+#sideGood{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     border-right: 3px solid #536400;
+     border-radius: 30px 0 0 30px;
+    background-color: #006400;
+    flex: 1;
+}
+#sideBad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 30px 30px 0;
+    border-left: 3px solid #663f00;
+    background-color: #dc1c1c;
+    flex: 1;
+}
+.containerResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+   width: 100%;
+   height: 100%;
+}
+#finalH{
+    text-align: center;
+    background-color: rgba(0, 94, 255, 0.604);
+    color: white;
+    border-radius: 50%;
+   padding: 20px;
+   width: 100px;
+   height: 100px;
+}
+#finalM{
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(0, 94, 255, 0.604);
+    padding: 20px;
+ width: 100px;
+ height: 100px;
+}
+.containerTotal{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#cardGood .containerTotal{
+  padding-top: 120px;
+}
+.total{
+    display: flex;
+    gap: 10px;
+}
+#buttonG{
+    align-self: center;
+    border-color: #4d744d;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #0a240a56;
+    background-color: #188d18;
+    width: 100%;
+    max-width: 150px;
+    padding: 5px
+   
+}
+#buttonG:hover{
+    background-color: #051e0573;
+     box-shadow: 0px 5px 10px #051205;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
+}
+#buttonResult{
+     align-self: center;
+    border-color: #7b73e8;
+    border-radius: 10px;
+    background-color: #473dcc;
+    box-shadow: 0px 5px 10px #06023366;
+    width: 100%;
+    max-width: 100px;
+    padding: 5px
+     
+}
+#buttonResult:hover{
+    background-color: #221e63;
+     box-shadow: 0px 5px 10px #050225;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
+}
+#buttonB{
+ align-self: center;
+    border-color: #d84e4ee2;
+    border-radius: 10px;
+    background-color: #dc1c1c;
+    box-shadow: 0px 5px 10px #2f020284;
+    width: 100%;
+    max-width: 150px;
+    padding: 5px
+}
+#buttonB:hover{
+    background-color: #450d0db5;
+    box-shadow: 0px 5px 10px #2f0202;
+    transform: translateY(-4px) ;
+    transition: background-color, transform 0.3s ease;
+}
+
+@media (max-width: 768px){
+   .containerGrid {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 20px;
+ }
+ #cardGood { order: 1; }
+  .colunaMeio { order: 3; }  
+  #cardBad { order: 2; }
+
+  #cardGood, #cardBad{
+    height: 500px;
+  max-height: none;
+  }
+  .input {
+   padding-bottom: 80px;
+  }
+  .containerTipo{
+    max-height: 120px;
+    
+  }
+  .containerTotal{
+    height: 100%;
+    max-height: 50px;
+    padding: 0;
+  }
+  #cardGood .containerTotal {
+
+  padding: 0;
+  }
+  
+}
+
+    
