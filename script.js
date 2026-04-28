@@ -1,7 +1,6 @@
 /*BUTTON TO CALCULATE PRODUCTIVE TIME TOTAL*/
 
 function calculateGood(){
-    
         /*got the value from the 2 inputs (Hour and min)*/
     let studyHrs = +document.getElementById("studyHrs").value
     let studyMins = +document.getElementById("studyMins").value
@@ -9,26 +8,29 @@ function calculateGood(){
     let readingHrs = +document.getElementById("readingHrs").value
     let readingMins = +document.getElementById("readingMins").value
 
+    /*checking if inputs are negative*/
+if (studyHrs < 0 || readingHrs < 0){
+    document.getElementById("totalGoodH").innerHTML = "INVALID INPUT"
+return;}
+if (studyMins < 0 || readingMins < 0){
+ document.getElementById("totalGoodM").innerHTML = "INVALID INPUT"
+return;}
+    /*if not continue*/
+
 /*summed the hours, summed the mins*/
     let sumGoodHrs = studyHrs + readingHrs
     let sumGoodMins = studyMins + readingMins 
     
     /*divided mins by 60 to get hours and then got the remaining mins*/
     const totalGoodH = Math.floor(sumGoodMins / 60)
+    let finalGoodH = sumGoodHrs + totalGoodH
     const totalGoodM = sumGoodMins % 60
+    console.log("terminaram")
 
     /*added to the final hour product*/
-     if (totalGoodH < 0 || totalGoodM < 0){
-    document.getElementById("totalGoodH").innerHTML = "INVALID INPUT"
-    document.getElementById("totalGoodM").innerHTML = "INVALID INPUT"
-     }
-     else if (totalGoodH > 0 || totalGoodM > 0){ 
-    let finalGoodH = sumGoodHrs + totalGoodH
-    document.getElementById("totalGoodH").innerHTML = finalGoodH
+   document.getElementById("totalGoodH").innerHTML = finalGoodH 
     document.getElementById("totalGoodM").innerHTML = totalGoodM
-    }
 }
-
 /*BUTTON TO CALCULATE UNPRODUCTIVE TIME TOTAL*/
 
 function calculateBad(){
@@ -42,6 +44,15 @@ function calculateBad(){
     let gamingHrs = +document.getElementById("gamingHrs").value
     let gamingMins = +document.getElementById("gamingMins").value
 
+    /*checking if inputs are negative*/
+if (shortHrs < 0 || videoHrs < 0 || gamingHrs < 0){
+    document.getElementById("totalBadH").innerHTML = "INVALID INPUT"
+return;}
+if (shortMins < 0 || videoMins < 0 || gamingMins < 0){
+    document.getElementById("totalBadM").innerHTML = "INVALID INPUT"
+return;}
+    /*if not continue*/
+console.log("começou soma")
     /*summed the hours, summed the mins*/
     let sumBadHrs = shortHrs + videoHrs + gamingHrs
     let sumBadMins = shortMins + videoMins + gamingMins
@@ -53,15 +64,8 @@ function calculateBad(){
     
 
      /*added to the final hour product*/
-      if (totalBadH < 0 || totalBadM < 0){
-    document.getElementById("totalBadH").innerHTML = "INVALID INPUT"
-    document.getElementById("totalBadM").innerHTML = "INVALID INPUT"
-     }
-    else if (totalBadH > 0 || totalBadM > 0){
-     const finalBadH = sumBadHrs + totalBadH
-     document.getElementById("totalBadH").innerHTML = finalBadH 
-     document.getElementById("totalBadM").innerHTML = totalBadM 
-    }
+   document.getElementById("totalBadH").innerHTML = totalBadH 
+   document.getElementById("totalBadM").innerHTML = totalBadM
 }
 function calculate(){
     let finalGoodH = +document.getElementById("totalGoodH").innerHTML
@@ -93,3 +97,5 @@ document.getElementById("percentage2").innerHTML = percentageBad
 }
 
 }
+
+
