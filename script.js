@@ -25,7 +25,7 @@ return;}
     const totalGoodH = Math.floor(sumGoodMins / 60)
     let finalGoodH = sumGoodHrs + totalGoodH
     const totalGoodM = sumGoodMins % 60
-    console.log("terminaram")
+   
 
     /*added to the final hour product*/
    document.getElementById("totalGoodH").innerHTML = finalGoodH 
@@ -52,7 +52,7 @@ if (shortMins < 0 || videoMins < 0 || gamingMins < 0){
     document.getElementById("totalBadM").innerHTML = "INVALID INPUT"
 return;}
     /*if not continue*/
-console.log("começou soma")
+
     /*summed the hours, summed the mins*/
     let sumBadHrs = shortHrs + videoHrs + gamingHrs
     let sumBadMins = shortMins + videoMins + gamingMins
@@ -97,5 +97,3 @@ document.getElementById("percentage2").innerHTML = percentageBad
 }
 
 }
-
-
